@@ -1,0 +1,22 @@
+html, body, div, h1, h2, h3, h4, h5, h6, input, textarea, span, p, table, form{
+  margin: 0;
+  padding: 0;
+}
+a, a:active, a:visited, a:hover{text-decoration: none;}
+body{font-family: 'Noto Sans KR', sans-serif;}
+html{scroll-behavior: smooth;}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .container{width: 1180px; margin: 0 auto;}
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .container{width: 880px; margin: 0 auto;}
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container{width: 343px; margin: 0 auto;}
+}
