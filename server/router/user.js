@@ -9,13 +9,6 @@ const sql = require('../db/sql');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-router.get('/test', (req, res) => {
-    connect.query('desc user', [], (err, result) => {
-        console.log(result);
-        res.send('sadf')
-    })
-})
-
 // 로그인
 router.post('/login', (req, res) => {
     const _email = req.body.email;

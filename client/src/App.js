@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 // component
 import Nav from './component/Navbar';
 import Footer from './component/Footer';
+import NotFound from './component/NotFound';
 import Home from './component/Home';
 import Login from './component/Login';
 import Register from './component/Register';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/terms" component={Tab1}/>
           <Route path="/privacy" component={Tab2}/>
           <Route path="/faq" component={Tab3}/>
+          <Route component={NotFound}/>
         </Switch>
         <Footer/>
       </Router>
