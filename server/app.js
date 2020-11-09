@@ -6,6 +6,7 @@ const sessionStore = require('./session/sessionStore');
 
 const userRouter = require('./router/user');
 const goalRouter = require('./router/goal');
+const managerRouter = require('./router/manager');
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,6 +23,7 @@ app.use(session({
 
 app.use('/api/user', userRouter);
 app.use('/api/goal', goalRouter);
+app.use('/api/manager', managerRouter);
 
 app.get('/', (req, res) => {
     res.send('JAKSIM 31 NODE SERVER');

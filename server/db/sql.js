@@ -11,6 +11,10 @@ const sql = {
         select_by_email_false: `select * from goal where owner = ? and is_finish = 0`,
         select_by_id: `select * from goal where id = ?`
     },
+    manager: {
+        select_all: `select * from manager where goal_id = ?`,
+        select_detail: `select * from manager where goal_id = ? order by id asc limit 1 offset ?`
+    },
 }
 
 module.exports = sql;
