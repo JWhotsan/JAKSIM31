@@ -31,6 +31,17 @@ router.post('/select-list', (req, res) => {
     })
 })
 
+router.post('/select-all', (req, res) => {
+    const _id = req.body.id;
+
+    connect.query(sql.manager.select_all, [_id], (err, result) => {
+        if(err){res.json({success: false, message: '오류가 발생했습니다.'})}
+        else{
+            res.json({success: true, message: '전체 검색이 완료되었습니다.', result: result})
+        }
+    })
+})
+
 router.post('/select-detail', (req, res) => {
     const _goal_id = req.body.goal_id;
     const _id = req.body.id;

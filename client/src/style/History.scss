@@ -1,0 +1,32 @@
+.history{
+    .title{
+        font-size: 1.6em;
+        font-weight: 500;
+        margin: 60px 0 50px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #aaa;
+    }
+    .wrap-review{
+        margin-bottom: 160px;
+    }
+
+    .review-box{
+        font-size: 18px;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #aaa;
+        .day-count{
+            font-size: 22px;
+            font-weight: 700;
+            color: #6381a8;
+        }
+        table{
+            margin-top: 10px;
+            font-weight: 600;
+            td{padding: 3px;}
+            .bold{min-width: 40vw;}
+        }
+
+        .bold{font-weight: 600; margin-top: 10px;}
+    }
+}
