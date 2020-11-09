@@ -27,7 +27,7 @@
 @media (min-width: 1025px) {
     .wrap-banner{
         .container{
-            width: 65%;
+            width: 75%;
             padding: 100px calc((100% - 1180px)/2) 0;
             .title{font-size: 35px;}
             .text{margin-top: 10px; font-size: 20px;}
@@ -39,10 +39,28 @@
 
 // Tablet
 @media (min-width: 481px) and (max-width: 1024px) {
-    
+    .wrap-banner{
+        .container{
+            width: 75%;
+            padding: 50px calc((100% - 880px)/2) 0;
+            .title{font-size: 35px;}
+            .text{margin-top: 10px; font-size: 18px;}
+            .tag{margin-top: 30px; font-size: 16px; span{padding-right: 10px;}}
+            .btn{margin-top: 30px; font-size: 16px; padding: 4px 20px;}
+        }
+    }
 }
 
 // Mobile
 @media (max-width: 480px) {
-    
+    .wrap-banner{
+        .container{
+            width: 75%;
+            padding: 50px calc((100% - 880px)/2) 0;
+            .title{font-size: 35px;}
+            .text{margin-top: 10px; font-size: 18px;}
+            .tag{margin-top: 30px; font-size: 16px; span{padding-right: 10px;}}
+            .btn{margin-top: 30px; font-size: 16px; padding: 4px 20px;}
+        }
+    }
 }
