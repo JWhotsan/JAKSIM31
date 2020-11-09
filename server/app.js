@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const session = require('express-session');
 const sessionStore = require('./session/sessionStore');
 
+const userRouter = require('./router/user');
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
@@ -16,6 +18,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+
+app.use('/api/user', userRouter);
 
 app.get('/', (req, res) => {
     res.send('JAKSIM 31 NODE SERVER');
