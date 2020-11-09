@@ -1,0 +1,26 @@
+.mini-banner{
+    width: 100%;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    background-image: url('../image/mini-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    .wrap-banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    a{color: #fff;}
+    .title{font-weight: 700;}
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .mini-banner{
+        background-position: center;
+        height: 180px;
+        .wrap-banner{height: 180px;}
+        .link{font-size: 16px;}
+        .title{font-size: 35px; padding-top: 4px;}
+    }
+}

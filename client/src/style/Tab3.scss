@@ -1,0 +1,21 @@
+.faq{
+    margin-bottom: 160px;
+    .notice{
+        font-size: 1.6em;
+        font-weight: 500;
+        margin: 60px 0 50px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #aaa;
+    }
+    details{
+        font-size: 1.2em;
+        margin-bottom: 40px;
+        summary{
+            font-weight: 600;
+            &:focus{outline: none;}
+        }
+        div{
+            padding: 10px 0px 10px 50px;
+        }
+    }
+}

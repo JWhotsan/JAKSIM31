@@ -1,0 +1,17 @@
+.terms{
+    margin-bottom: 160px;
+    .notice{
+        font-size: 1.6em;
+        font-weight: 500;
+        margin: 60px 0 50px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #aaa;
+    }
+    .article{
+        font-size: 0.9em;
+        color: #555;
+        margin: 10px 0 24px;
+        .title{font-weight: 700; color: #000}
+        ol{li{padding: 2px 0;}}
+    }
+}
