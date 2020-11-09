@@ -9,13 +9,19 @@ const sql = require('../db/sql');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
+router.get('/test', (req, res) => {
+    connect.query('desc user', [], (err, result) => {
+        console.log(result);
+        res.send('sadf')
+    })
+})
+
 // 로그인
 router.post('/login', (req, res) => {
     const _email = req.body.email;
     const _password = req.body.password;
 
     connect.query(sql.user.select_by_email, [_email], (err, result) => {
-        console.log(result);
         if(err){res.json({success: false, message: '문제가 발생했습니다. 다시 시도해주세요.'})}
         else{
             if(result.length > 0){
@@ -74,7 +80,8 @@ router.post('/register', (req, res) => {
                     else{
                         bcrypt.hash(_password, saltRounds, function(err, hash) {
                             connect.query(sql.user.insert_user, [_email, hash, _username, _phone], (err, success) => {
-                                if(err){res.json({success: false, message: '문제가 발생했습니다. 다시 시도해주세요.'})}
+                                console.log(_email, _password, _username, _password);
+                                if(err){console.log(err); res.json({success: false, message: '문제가 발생했습니다. 다시 시도해주세요.'})}
                                 else{
                                     res.json({success: true, message: '회원가입이 완료되었습니다.'})
                                 }
