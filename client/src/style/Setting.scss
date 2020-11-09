@@ -1,0 +1,118 @@
+// All
+.setting{
+    .page-down{
+        background-image: url('../image/setting/page-down.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .wrap-image{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 60px;
+        .example-image{
+            background-image: url('../image/setting/report-ex.png');
+            background-size: contain;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+        .img1{background-image: url('../image/setting/review-ex.png');}
+        .img2{background-image: url('../image/setting/report-ex.png');}
+    }
+    .wrap-greeting{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .hi{font-weight: 900; color: #6381a8;}
+        .sub-hi{font-weight: 500;}
+    }
+    .wrap-question{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title{font-weight: 700;}
+        .explain{font-weight: 500; color: #333;}
+        input[type="text"]{
+            border: 2px solid #6381a8;
+            border-radius: 5px;
+            background: none;
+            &:focus{outline: none;}
+        }
+    }
+    .wrap-bye{
+        height: 100vh;
+    }
+    button{
+        border: none;
+        background: #fff;
+        border-radius: 50px;
+        color: #6381a8;
+        font-weight: 700;
+        box-shadow: 2px 2px 3px 2px rgba(99,129,168,0.2);
+        &:focus{outline: none;}
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .setting{
+        input[type="text"]{box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);}
+        .page-down{width: 60px; height: 60px;}
+        .wrap-greeting{
+            height: calc(100vh - 180px - 60px);
+            .hi{font-size: 60px;}
+            .sub-hi{font-size: 22px; padding-top: 30px;}
+        }
+        .wrap-question{
+            position: relative;
+            height: 100vh;
+            .title{padding: 30px 0 20px; font-size: 35px;}
+            .explain{font-size: 20px;}
+            input[type="text"]{width: 100%; padding: 6px;}
+            .page-down{position: absolute; bottom: 70px;}
+            .example-image{
+                width: 550px;
+                height: 300px;
+            }
+        }
+        #section3{
+            h3{padding: 70px 0 12px;}
+        }
+        #section4{
+            h3{padding: 40px 0 12px;}
+        }
+        #section5{
+            .wrap-cover{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                .cover{
+                    border-radius: 500px;
+                    background-size: contain;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            .input_tag{margin-top: 40px; display: flex; span{padding-right: 10px;}}
+            input[type="text"]{padding: 6px;}
+        }
+        #section6{
+            height: calc(100vh - 60px);
+            button{
+                padding: 4px 60px;
+                margin: 100px 0 0 0;
+            }
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+}
+
+// Mobile
+@media (max-width: 480px) {
+}

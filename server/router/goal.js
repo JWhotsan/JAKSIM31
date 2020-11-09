@@ -134,7 +134,7 @@ router.post('/check-finish', (req, res) => {
             if(result.length === 30){
                 res.json({success: true, message: '목표 달성을 축하드립니다!'})
                 connect.query('update goal set is_finish=1 where id = ?', [_id], (err, result) => {
-
+                    
                 })
             }
             else{
