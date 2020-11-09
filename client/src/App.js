@@ -14,6 +14,7 @@ import Register from './component/Register';
 import Mypage from './component/Mypage';
 import Setting from './component/Setting';
 import GoalManagement from './component/GoalManagement';
+import DailyReview from './component/DailyReview';
 import Tab1 from './component/Tab1';
 import Tab2 from './component/Tab2';
 import Tab3 from './component/Tab3';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/mypage" component={Mypage}/>
           <Route path="/setting" component={Setting}/>
           <Route path="/goal-management/:id" component={GoalManagement}/>
+          <Route path="/daily-review/:id" component={DailyReview}/>
           <Route path="/terms" component={Tab1}/>
           <Route path="/privacy" component={Tab2}/>
           <Route path="/faq" component={Tab3}/>

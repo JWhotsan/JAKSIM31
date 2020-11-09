@@ -12,6 +12,8 @@ const sql = {
         select_by_id: `select * from goal where id = ?`
     },
     manager: {
+        isWritten: `select * from manager where goal_id = ? and write_date = ?`,
+        insert: `insert into manager(goal_id, write_date, do1, do1_point, do2, do2_point, do3, do3_point, review_diary) values(?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         select_all: `select * from manager where goal_id = ?`,
         select_detail: `select * from manager where goal_id = ? order by id asc limit 1 offset ?`
     },

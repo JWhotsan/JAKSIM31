@@ -125,21 +125,14 @@ router.post('/isexist', (req, res) => {
     })
 })
 
-router.post('/check-finish', (req, res) => {
-    const _id = req.body.id;
+router.post('/isfinish', (req, res) => {
+    const _goal_id = req.body.goal_id;
 
-    connect.query(sql.manager.select_all, [_id], (err, result) => {
-        if(err){res.json({success: false, message: '오류가 발생했습니다'})}
+    connect.query(sql.goal.select_by_id, [_goal_id], (err, result) => {
+        if(err){res.json({success: false, message: '오류가 발생했습니다.'})}
         else{
-            if(result.length === 30){
-                res.json({success: true, message: '목표 달성을 축하드립니다!'})
-                connect.query('update goal set is_finish=1 where id = ?', [_id], (err, result) => {
-                    
-                })
-            }
-            else{
-                res.json({success: false, message: '아직 완주하지 않았어요.'})
-            }
+            if(result[0].is_finish === 0){res.json({success: false, message: '완료되지 않은 목표입니다.'})}
+            else{res.json({success: true, message: '완료된 목표가 맞습니다.'})}
         }
     })
 })
