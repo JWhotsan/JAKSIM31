@@ -1,7 +1,7 @@
 const config = {
-    host     : '3.88.32.103',
+    host     : '34.205.17.78',
     user     : 'jaksim31',
-    password : 'jaksim31',
+    password : '1234',
     database : 'jaksim31'
 }
 
