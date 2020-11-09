@@ -100,4 +100,48 @@ router.post('/delete', (req, res) => {
     }
 })
 
+router.post('/isowner', (req, res) => {
+    const _email = req.session.user.email;
+    const _goal_id = req.body.goal_id;
+
+    connect.query(sql.goal.select_by_id, [_goal_id], (err, result) => {
+        if(err){res.json({success: false, message: '오류가 발생했습니다.'})}
+        else{
+            if(result[0].owner === _email){res.json({success: true, message: '리포트 정보가 확인되었습니다'})}
+            else{res.jsson({success: false, message: '사용자 정보가 일치하지 않습니다.'})}
+        }
+    })
+})
+
+router.post('/isexist', (req, res) => {
+    const _goal_id = req.body.goal_id;
+
+    connect.query(sql.goal.select_by_id, [_goal_id], (err, result) => {
+        if(err){res.json({success: false, message: '오류가 발생했습니다.'})}
+        else{
+            if(result.length === 1){res.json({success: true, message: '목표가 존재합니다.'})}
+            else{res.json({success: false, message: '목표가 존재하지 않거나 잘못된 값입니다.'})}
+        }
+    })
+})
+
+router.post('/check-finish', (req, res) => {
+    const _id = req.body.id;
+
+    connect.query(sql.manager.select_all, [_id], (err, result) => {
+        if(err){res.json({success: false, message: '오류가 발생했습니다'})}
+        else{
+            if(result.length === 30){
+                res.json({success: true, message: '목표 달성을 축하드립니다!'})
+                connect.query('update goal set is_finish=1 where id = ?', [_id], (err, result) => {
+
+                })
+            }
+            else{
+                res.json({success: false, message: '아직 완주하지 않았어요.'})
+            }
+        }
+    })
+})
+
 module.exports = router;
