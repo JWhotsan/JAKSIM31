@@ -1,0 +1,50 @@
+// All
+.footer{
+    background: #f3f3f3;
+    footer{
+        font-size: 0.9em;
+        width: 100%;
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+        a{color: #000000; }
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    footer{
+        align-items: center;
+        .footer-menu{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            a{margin-left: 20px;}
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+    footer{
+        align-items: center;
+        .footer-menu{
+            display: flex;
+            align-items: flex-end;
+            a{margin-left: 10px;}
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 480px) {
+    footer{
+        flex-direction: column-reverse;
+        align-items: center;
+        .footer-menu{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
