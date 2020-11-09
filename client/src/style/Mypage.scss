@@ -1,0 +1,106 @@
+// All
+.mypage{
+    .wrap-choose{
+        display: flex;
+        .self{
+            background: rgb(233,219,233);
+            background: linear-gradient(0deg, rgba(233,219,233,0.6) 0%, rgba(248,245,248,1) 40%, rgba(251,249,251,1) 60%, rgba(253,252,253,1) 80%, rgba(255,255,255,1) 100%);
+            align-items: flex-end;
+            text-align: right;
+        }
+        .test{
+            background: rgb(172,197,225);
+            background: linear-gradient(0deg, rgba(172,197,225,0.3) 0%, rgba(240,244,250,1) 40%, rgba(242,246,251,1) 60%, rgba(248,250,253,1) 80%, rgba(255,255,255,1) 100%);
+            align-items: flex-start;
+            text-align: left;
+        }
+        .choose{
+            display: flex;
+            flex-direction: column;
+            .title{color: #6381a8; font-weight: 700;}
+            .subtitle{font-weight: 900;}
+            .content{color: #aaa;}
+            .btn{
+                background: #fff;
+                border-radius: 50px;
+                color: #6381a8;
+                font-weight: 700;
+                box-shadow: 2px 2px 3px 2px rgba(99,129,168,0.2);
+            }
+        }
+    }
+    .goal-list{
+        .list-title{font-weight: 700;}
+        .wrap-goal{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            .goal{
+                text-align: center;
+                a{color: #000; font-weight: 500;}
+                .cover{
+                    color: #fff;
+                    font-weight: 700;
+                    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+                    border-radius: 500px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .mypage{
+        margin-bottom: 160px;
+        .mini-banner{
+            background-position: center;
+            height: 180px;
+            .wrap-banner{height: 180px;}
+            .link{font-size: 16px;}
+            .title{font-size: 35px; padding-top: 4px;}
+        }
+        .wrap-choose{
+            .choose{
+                width: 50%;
+                height: 380px;
+                padding: 0 40px;
+                justify-content: center ;
+                .title{font-size: 14px;}
+                .subtitle{margin: 4px 0 10px; font-size: 24px;}
+                .content{width: 50%;}
+                .btn{margin-top: 40px; padding: 4px 60px;}
+            }
+        }
+        .goal-list{
+            .list-title{font-size: 24px; margin-top: 120px;}
+            .not-found{color: #aaa; margin-top: 16px;}
+        }
+        
+        .goal{
+            margin-left: 70px;
+            margin-top: 40px;
+            .cover{
+                width: 180px;
+                height: 180px;
+                line-height: 180px;
+            }
+            .title{margin-top: 16px;}
+            &:first-child{margin-left: 0;}
+            &:nth-child(6n){margin-left: 0;}
+        }
+    }
+}
+
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+}
+
+// Mobile
+@media (max-width: 480px) {
+}
