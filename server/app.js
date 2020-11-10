@@ -31,6 +31,6 @@ app.get('/', (req, res) => {
     res.send('JAKSIM 31 NODE SERVER');
 })
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('JAKSIM 31 server is running...');
 })

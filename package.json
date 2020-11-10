@@ -19,9 +19,5 @@
   "bugs": {
     "url": "https://github.com/JWhotsan/JAKSIM31/issues"
   },
-  "engine": {
-    "node": "12.16.3",
-    "npm": "6.14.8"
-  },
   "homepage": "https://github.com/JWhotsan/JAKSIM31#readme"
 }
