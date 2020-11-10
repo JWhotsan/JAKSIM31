@@ -1,0 +1,27 @@
+{
+  "name": "jaksim-31",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "backend": "nodemon server/app.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JWhotsan/JAKSIM31.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JWhotsan/JAKSIM31/issues"
+  },
+  "engine": {
+    "node": "12.16.3",
+    "npm": "6.14.8"
+  },
+  "homepage": "https://github.com/JWhotsan/JAKSIM31#readme"
+}
