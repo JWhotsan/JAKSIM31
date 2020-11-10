@@ -137,4 +137,26 @@ router.post('/isfinish', (req, res) => {
     })
 })
 
+router.post('/check-finish', (req, res) => {
+    const _id = req.body.id;
+    const today = new Date();
+    const _end_date = today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate();
+
+    connect.query(sql.manager.select_all, [_id], (err, result) => {
+        if(err){res.json({success: false, message: '오류가 발생했습니다'})}
+        else{
+            console.log(result.length)
+            if(result.length >= 30){
+                res.json({success: true, message: '목표 달성을 축하드립니다!'})
+                connect.query('update goal set is_finish=1, end_date=? where id = ?', [_end_date, _id], (err, result) => {
+                    
+                })
+            }
+            else{
+                res.json({success: false, message: '아직 완주하지 않았어요.'})
+            }
+        }
+    })
+})
+
 module.exports = router;

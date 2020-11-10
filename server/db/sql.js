@@ -17,6 +17,10 @@ const sql = {
         select_all: `select * from manager where goal_id = ?`,
         select_detail: `select * from manager where goal_id = ? order by id asc limit 1 offset ?`
     },
+    report: {
+        select_by_id: `select * from manager where goal_id = ?`,
+        update_review: `update goal set review = ? where id = ?`,
+    }
 }
 
 module.exports = sql;

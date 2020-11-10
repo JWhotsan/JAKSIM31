@@ -1,0 +1,104 @@
+// All
+.report{
+    .title{font-weight: 700;}
+    .sub-title{font-weight: 700; color: #6381a8;}
+    .date{font-weight: 700; color: #aaa;}
+    .wrap-flex{
+        .wrap-goal{
+            .main-goal{font-weight: 700;}
+            .sub-goal{font-weight: 500; span{color: #6381a8;}}
+        }
+        .wrap-persent{.persent{font-weight: 500; }}
+    }
+    .wrap-button{
+        display: flex;
+        justify-content: flex-end;
+        .btn{
+            background: #fff;
+            border-radius: 50px;
+            color: #6381a8;
+            font-weight: 700;
+            box-shadow: 2px 2px 3px 2px rgba(99,129,168,0.2);
+        }
+    }
+    .wrap-review{
+        textarea{
+            resize: none;
+            border: 2px solid #6381a8;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px 2px rgba(99,129,168,0.2);
+            &:focus{outline: none;}
+        }
+        button{
+            background: #6381a8;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px 2px rgba(99,129,168,0.2);
+            color: #fff;
+            font-weight: 700;
+            &:focus{outline: none;}
+        }
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .report{
+        margin: 60px 0 160px;
+        .title{font-size: 36px;}
+        .sub-title{font-size: 24px; margin-top: 28px; margin-bottom: 8px;}
+        .wrap-flex{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            .wrap-goal{
+                width: 50%;
+                .main-goal{font-size: 20px; margin-bottom: 6px;}
+                .sub-goal{margin-bottom: 4px;}
+            }
+            .wrap-persent{
+                width: 50%;
+                font-size: 54px;
+            }
+        }
+        .recharts-wrapper{margin-top: 40px; margin-bottom: 80px;}
+        .wrap-feedback{
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            .wrap-feedback-item{
+                width: 45%;
+                margin-right: 5%;
+                .feedback-title{font-weight: 700; font-size: 18px; margin-top: 8px;}
+                .feedback{margin-top: 6px;}
+                .feedback-date{text-align: right; margin-top: 40px;}
+            }
+        }
+        .wrap-review{
+            margin-bottom: 80px;
+        }
+        .wrap-button{
+            .btn{padding: 4px 60px;}
+        }
+        .wrap-review{
+            margin-top: 20px;
+            form{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                textarea{width: 1080px; height: 64px; padding: 2px 4px;}
+            button{width: 70px; height: 74px; padding: 2px 4px; line-height: 40px;}
+            }
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+
+}
+
+// Mobile
+@media (max-width: 480px) {
+
+}

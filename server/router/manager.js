@@ -89,3 +89,6 @@ router.post('/daily-review', (req, res) => {
 })
 
 module.exports = router;
+
+
+// id, goal_id, write_date, do1, do1_point, do2, do2_point, do3, do3_point, review_diary
