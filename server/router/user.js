@@ -99,7 +99,7 @@ router.post('/logout', (req, res) => {
 
 // 로그인 확인
 router.get('/islogin', (req, res) => {
-    if(req.session.user === null){
+    if(req.session.user === null || req.session.user === undefined){
         res.json({isLogin: false});
     }else{
         res.json({isLogin: true});

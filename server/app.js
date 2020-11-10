@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const bodyParser = require('body-parser')
 const session = require('express-session');
 const sessionStore = require('./session/sessionStore');
@@ -13,6 +14,8 @@ const reportRouter = require('./router/report');
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.use(session({
     key: 'jaksim31_user',
@@ -29,6 +32,10 @@ app.use('/api/report', reportRouter);
 
 app.get('/', (req, res) => {
     res.send('JAKSIM 31 NODE SERVER');
+})
+
+app.get('/test', (req, res) => {
+    res.json({message: 'hi'})
 })
 
 app.listen(process.env.PORT || 5000, () => {
