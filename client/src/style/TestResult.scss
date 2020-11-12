@@ -1,0 +1,67 @@
+.test-result{
+    .background{
+        width: 100%;
+        height: calc(100vh - 60px);
+        padding: 40px 0 160px;
+        background-image: url('../image/test/background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .wrap-form{
+            width: 100%;
+            height: calc(100vh - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .title{
+                color: #fff;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+            .result{
+                width: 400px;
+                background: #fff;
+                box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+                border-radius: 5px;
+                background: #f3f3f3;
+                padding: 60px 60px;
+                .title{
+                    text-align: center;
+                    color: #000;
+                    text-shadow: none;
+                    font-size: 20px;
+                    margin: 0 0 20px 0;
+                }
+                .content{
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+                .image{
+                    width: 180px;
+                    height: 180px;
+                    margin: 0 auto;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-bottom: 30px;
+                }
+                .button{
+                    margin: 0 auto;
+                    margin-top: 80px;
+                    width: 200px;
+                    text-align: center;
+                    padding: 2px 0;
+                    background: #fff;
+                    border-radius: 50px;
+                    color: #6381a8;
+                    font-size: 14px;
+                    font-weight: 700;
+                    box-shadow: 2px 2px 3px 2px rgba(99,129,168,0.2);
+                }
+            }
+        }
+    }
+}
