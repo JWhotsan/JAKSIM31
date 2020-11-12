@@ -59,7 +59,7 @@ const DailyReview = ({match}) => {
             }
         })
 
-    }, [])
+    }, [_goal_id])
 
     const onSubmitHandler = (event) => {
         event.preventDefault();

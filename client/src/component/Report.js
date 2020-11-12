@@ -63,7 +63,7 @@ const Report = ({match}) => {
             
         })
 
-    }, []);
+    }, [_goal_id]);
 
     const submitReview = (event) => {
         event.preventDefault();

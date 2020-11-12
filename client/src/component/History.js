@@ -50,7 +50,7 @@ const History = ({match}) => {
                 })
             }
         })
-    }, [])
+    }, [_goal_id])
 
     return(
         <div className="history">

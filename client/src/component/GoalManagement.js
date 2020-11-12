@@ -53,7 +53,7 @@ const GoalManagement = ({match}) => {
                 })
             }
         })
-    }, [])
+    }, [_goal_id])
 
     const onClickFinish = () => {
         axios.post('/api/goal/check-finish', {
