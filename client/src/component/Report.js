@@ -104,7 +104,7 @@ const Report = ({match}) => {
                 {/* 성장 곡선 그래프 */}
                 <div className="sub-title" data-aos="fade-up"><span role="img" aria-label="chart increasing">📈</span> 성장 곡선 그래프</div>
                 <div data-aos="fade-up">
-                    <AreaChart width={isMobile() ? 343 : 1180} height={250} data={data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
+                    <AreaChart width={isMobile() ? 800 : 1180} height={250} data={data} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
                         <defs>
                             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="5%" stopColor="#acc5e1" stopOpacity={0.8}/>

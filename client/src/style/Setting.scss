@@ -56,7 +56,7 @@
 }
 
 // Desktop, Labtop
-@media (min-width: 1025px) {
+// @media (min-width: 1025px) {
     .setting{
         input[type="text"]{box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);}
         .page-down{width: 60px; height: 60px;}
@@ -107,7 +107,7 @@
             }
         }
     }
-}
+// }
 
 // Tablet
 @media (min-width: 481px) and (max-width: 1024px) {
